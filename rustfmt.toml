@@ -1,0 +1,10 @@
+# Formatting config for `cargo fmt`. Committed so everyone (and CI) formats
+# identically. rustfmt has good defaults; we only pin a couple of things.
+
+# Follow the 2024 edition's formatting rules (matches our `edition = "2024"`),
+# so formatting doesn't drift when the toolchain updates.
+style_edition = "2024"
+
+# Wrap at 100 columns. This is rustfmt's default too — stated explicitly so the
+# intent is obvious to anyone reading the repo.
+max_width = 100

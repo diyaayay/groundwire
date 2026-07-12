@@ -1,0 +1,23 @@
+[package]
+name = "groundwire"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+name = "groundwire"
+path = "src/lib.rs"
+
+[[bin]]
+name = "groundwire"
+path = "src/main.rs"
+
+[dependencies]
+anyhow = "1.0.103"
+lsp-types = "0.97.0"
+rmcp = { version = "2.2.0", features = ["transport-io"] }
+serde = { version = "1.0.228", features = ["derive"] }
+serde_json = "1.0.150"
+thiserror = "2.0.18"
+tokio = { version = "1.52.3", features = ["macros", "rt-multi-thread", "process", "io-util", "io-std", "sync", "time"] }
+tracing = "0.1.44"
+tracing-subscriber = { version = "0.3.23", features = ["env-filter"] }
