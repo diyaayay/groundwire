@@ -29,4 +29,5 @@
 //! - `format`    — LSP results → compact, token-efficient text        (Phase 4)
 //! - `workspace` — project-root & language detection                  (Phase 2+)
 
-// Modules are declared here as we build them. First up (Phase 1): `lsp::transport`.
+// Modules are declared here as we build them.
+pub mod lsp;
