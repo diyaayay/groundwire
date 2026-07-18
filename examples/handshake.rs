@@ -1,3 +1,4 @@
+
 //! Proof of life: spawn `rust-analyzer`, complete the `initialize` handshake,
 //! and print the raw `initialize` result. This is Phase 1b of the roadmap — the
 //! first time our framing drives a *real* language server instead of a test
@@ -62,9 +63,7 @@ async fn main() -> Result<()> {
         "params": {
             // Our PID lets the server exit if we die unexpectedly.
             "processId": std::process::id(),
-            // `.clone()` because we reuse this URI again in workspaceFolders below,
-            // and a String can't be moved twice.
-            "rootUri": root_uri.clone(),
+            "rootUri": root_uri,
             // Empty capabilities = "I support the bare minimum." Fine for a probe;
             // Phase 2 will declare the specific client capabilities we actually use.
             "capabilities": {},
